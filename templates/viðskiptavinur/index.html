@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>Viðskiptavinir</h2>
+    <div class="viðskiptavinir">
+        {% for viðskiptavinur in viðskiptavinir %}
+            {% include 'viðskiptavinur/single_viðskiptavinur.html' with viðskiptavinur=viðskiptavinur %}
+        {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>{{ house.name }}</h1>
+    <p>{{ house.description }}</p>
+    <p>{{ house.price }}$</p>
+    <p>Viðskpitavinur: {{house.viðskiptavinur.name }}</p>
+    {% for house_image in house.houseimage_set.all %}
+        <img src="{{ house_image.image }}" class="house-img"/>
+    {% endfor %}
+{% endblock %}

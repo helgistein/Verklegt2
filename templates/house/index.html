@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h3 class="red">Houses</h3>
+<div class="houses">
+    {% for house in houses %}
+        {% include 'house/single_house.html' with house=house %}
+    {% endfor %}
+</div>
+
+
+
+
+
+{% endblock %}
